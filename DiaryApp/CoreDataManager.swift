@@ -16,11 +16,11 @@ class CoreDataManager: NSObject {
     override init() {
         
         guard let url = NSBundle.mainBundle().URLForResource("DiaryAppModel", withExtension: "momd") else {
-            fatalError("DiaryAppModel not found")
+            fatalError("DiaryApp not found")
         }
         
         guard let managedObjectModel = NSManagedObjectModel(contentsOfURL: url) else {
-            fatalError("ManagedObjectModel does not exist")
+            fatalError("managed object doesn't exist")
         }
         
         let persistentStoreCoordinator = NSPersistentStoreCoordinator(managedObjectModel: managedObjectModel)
@@ -30,7 +30,7 @@ class CoreDataManager: NSObject {
         
         
         guard let documentsURL = fileManager.URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask).first else {
-            fatalError("Documents Directory does not exist")
+            fatalError("Directory doesn't exist")
         }
         
         print(documentsURL)
@@ -42,9 +42,7 @@ class CoreDataManager: NSObject {
         try! persistentStoreCoordinator.addPersistentStoreWithType(NSSQLiteStoreType, configuration: nil, URL: storeURL, options: nil)
         
         let type = NSManagedObjectContextConcurrencyType.MainQueueConcurrencyType
-        
         self.managedObjectContext = NSManagedObjectContext(concurrencyType: type)
-        
         self.managedObjectContext.persistentStoreCoordinator = persistentStoreCoordinator
         
     }
