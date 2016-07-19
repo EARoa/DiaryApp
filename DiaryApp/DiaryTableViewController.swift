@@ -7,9 +7,14 @@
 //
 
 import UIKit
+import CoreData
 
-class DiaryTableViewController: UITableViewController {
+class DiaryTableViewController: UITableViewController,NSFetchedResultsControllerDelegate {
 
+    
+    var managedObjectContext :NSManagedObjectContext!
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
