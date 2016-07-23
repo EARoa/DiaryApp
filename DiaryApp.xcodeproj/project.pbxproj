@@ -14,6 +14,7 @@
 		10519D331D3E98BD008CC207 /* DiaryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10519D321D3E98BD008CC207 /* DiaryTableViewController.swift */; };
 		10519D361D3E9B5F008CC207 /* DiaryAppModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 10519D341D3E9B5F008CC207 /* DiaryAppModel.xcdatamodeld */; };
 		10519D381D3E9C19008CC207 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10519D371D3E9C19008CC207 /* CoreDataManager.swift */; };
+		10519D3A1D3EB8F9008CC207 /* AddEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10519D391D3EB8F9008CC207 /* AddEntryViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		10519D321D3E98BD008CC207 /* DiaryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiaryTableViewController.swift; sourceTree = "<group>"; };
 		10519D351D3E9B5F008CC207 /* DiaryAppModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DiaryAppModel.xcdatamodel; sourceTree = "<group>"; };
 		10519D371D3E9C19008CC207 /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		10519D391D3EB8F9008CC207 /* AddEntryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddEntryViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,12 +62,13 @@
 			children = (
 				10519D201D3E9855008CC207 /* AppDelegate.swift */,
 				10519D321D3E98BD008CC207 /* DiaryTableViewController.swift */,
+				10519D371D3E9C19008CC207 /* CoreDataManager.swift */,
+				10519D391D3EB8F9008CC207 /* AddEntryViewController.swift */,
 				10519D241D3E9855008CC207 /* Main.storyboard */,
 				10519D271D3E9855008CC207 /* Assets.xcassets */,
 				10519D291D3E9855008CC207 /* LaunchScreen.storyboard */,
 				10519D2C1D3E9855008CC207 /* Info.plist */,
 				10519D341D3E9B5F008CC207 /* DiaryAppModel.xcdatamodeld */,
-				10519D371D3E9C19008CC207 /* CoreDataManager.swift */,
 			);
 			path = DiaryApp;
 			sourceTree = "<group>";
@@ -144,6 +147,7 @@
 				10519D361D3E9B5F008CC207 /* DiaryAppModel.xcdatamodeld in Sources */,
 				10519D211D3E9855008CC207 /* AppDelegate.swift in Sources */,
 				10519D381D3E9C19008CC207 /* CoreDataManager.swift in Sources */,
+				10519D3A1D3EB8F9008CC207 /* AddEntryViewController.swift in Sources */,
 				10519D331D3E98BD008CC207 /* DiaryTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

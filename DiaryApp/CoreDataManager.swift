@@ -33,7 +33,7 @@ class CoreDataManager: NSObject {
             fatalError("Directory doesn't exist")
         }
         
-        print(documentsURL)
+//        print(documentsURL)
         
         let storeURL = documentsURL.URLByAppendingPathComponent("DiaryAppDatabase.sqlite")
         
