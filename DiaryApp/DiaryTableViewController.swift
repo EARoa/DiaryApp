@@ -101,5 +101,25 @@ class DiaryTableViewController: UITableViewController,NSFetchedResultsController
 
         return cell
 }
+    
+    
+    
+    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        
+        
+        if editingStyle == .Delete {
+            
+            let deletePosts: NSManagedObject = self.fetchedResultsController.objectAtIndexPath(indexPath) as! NSManagedObject
+            
+            self.managedObjectContext.deleteObject(deletePosts)
+            
+            try! self.managedObjectContext.save()
+            
+            self.tableView.reloadData()
+        }
+    }
+
+    
+    
 
 }
