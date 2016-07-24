@@ -66,6 +66,7 @@ class DiaryTableViewController: UITableViewController,NSFetchedResultsController
             break
             
         case .Delete:
+            self.tableView.deleteRowsAtIndexPaths([indexPath!], withRowAnimation: .Automatic)
             break
             
         case .Update:
@@ -77,7 +78,6 @@ class DiaryTableViewController: UITableViewController,NSFetchedResultsController
         }
     }
     
-
     
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -105,21 +105,10 @@ class DiaryTableViewController: UITableViewController,NSFetchedResultsController
     
     
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        
-        
         if editingStyle == .Delete {
-            
             let deletePosts: NSManagedObject = self.fetchedResultsController.objectAtIndexPath(indexPath) as! NSManagedObject
-            
             self.managedObjectContext.deleteObject(deletePosts)
-            
             try! self.managedObjectContext.save()
-            
-            self.tableView.reloadData()
         }
     }
-
-    
-    
-
 }
